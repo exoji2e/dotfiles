@@ -36,6 +36,9 @@ let g:ale_sign_column_always=1
 
 Plugin 'altercation/vim-colors-solarized'
 
+Plugin 'auto-pairs-gentle'
+let g:AutoPairsUseInsertedCount = 1
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
