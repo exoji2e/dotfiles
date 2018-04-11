@@ -4,5 +4,14 @@ Take a look inside `install.sh`, it will install a lot of different things that 
 It will also run `deploy.sh` inside other folders, which wipes your configs, 
 and places mine there instead. Run this at your own risk.
 
-run by `./install.sh`. It uses the default manager `apt-get` in ubuntu.
+
+run by: 
+
+```sh
+sudo apt-get update
+sudo apt-get install git
+git clone https://github.com/exoji2e/dotfiles
+cd dotfiles
+./install.sh
+```
 
