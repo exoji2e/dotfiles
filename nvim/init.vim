@@ -59,14 +59,14 @@ au BufRead,BufNewFile *.md setlocal wrap
 set whichwrap+=<,>,[,]
 
 " jump up visual lines instead of real lines.
-noremap  <buffer> <silent> k gk
-noremap  <buffer> <silent> j gj
-noremap  <buffer> <silent> 0 g0
-noremap  <buffer> <silent> $ g$
-noremap  <buffer> <silent> <Up>   gk
-noremap  <buffer> <silent> <Down> gj
-noremap  <buffer> <silent> <Home> g<Home>
-noremap  <buffer> <silent> <End>  g<End>
+noremap k gk
+noremap j gj
+noremap 0 g0
+noremap $ g$
+noremap <Up>   gk
+noremap <Down> gj
+noremap <Home> g<Home>
+noremap <End>  g<End>
 
 set rnu number
 set scrolloff=8
