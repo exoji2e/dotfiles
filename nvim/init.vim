@@ -26,8 +26,7 @@ let g:UltiSnipsEditSplit="vertical"
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
 
-"Plugin 'vim-syntastic/syntastic'
-"Asynchronous Lint Engine
+" Asynchronous Lint Engine
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 
 Plugin 'w0rp/ale'
@@ -46,14 +45,18 @@ filetype plugin indent on    " required
 set background=dark
 colorscheme solarized
 syntax on
+" tab = 4spaces
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
+" dont wrap normal files
 set nowrap
-augroup WrapLineInTeXFile
-    autocmd!
-    autocmd FileType tex setlocal wrap
-augroup END
 
-set rnu
-set number
+" wrap tex and md-files
+au BufRead,BufNewFile *.tex setlocal wrap shiftwidth=2 
+au BufRead,BufNewFile *.md setlocal wrap
+
+" let arrowkeys go to next line
+set whichwrap+=<,>,[,]
+
+set rnu number
 set scrolloff=8
