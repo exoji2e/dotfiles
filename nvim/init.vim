@@ -54,7 +54,7 @@ set nowrap
 " wrap tex and md-files
 au BufRead,BufNewFile *.tex setlocal wrap shiftwidth=2 
 au BufRead,BufNewFile *.md setlocal wrap
-au BufRead,BufNewFile *.html setlocal wrap
+au BufRead,BufNewFile *.html setlocal wrap shiftwidth=2
 
 " let arrowkeys go to next line
 set whichwrap+=<,>,[,]

@@ -18,11 +18,6 @@ cd fish && ./install.sh && cd ..
 
 sudo apt-get install $SH $VC $ETC $ED
 
-# Not sure if this is enough.
-# Might need to edit /etc/default/keyboard as well
-# Have to test this the next time I set up a new ubuntu session.
-setxkbmap -option ctrl:nocaps
-
 sudo apt-get install $LANGS $APPS $LATEX
 
 echo "uncomment to set name and email in gitconfig"
