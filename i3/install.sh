@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo apt-get install i3 
+sudo apt-get install i3 i3blocks
