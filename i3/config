@@ -24,17 +24,11 @@ bindsym XF86MonBrightnessUp exec "light -A 10"
 bindsym XF86MonBrightnessDown exec "light -U 10" 
 
 # Background
-exec "feh --bg-scale ~/.config/i3/floral-fractal.jpg"
+exec "feh --bg-scale ~/.config/i3/floral-fractal.png"
 # Suspend
 bindsym $mod+Ctrl+Shift+z exec "i3lock -i ~/.config/i3/floral-fractal.png -t && gksudo pm-suspend"
 # Lock
 bindsym $mod+Ctrl+Shift+l exec "i3lock -i ~/.config/i3/floral-fractal.png -t"
-
-# Startup items
-#
-# Startup activitywatch. SHould make this more clean, right now it assumes very specific folder structure.
-exec --no-startup-id "bash ~/repos/activitywatch/startaw.sh 2> /dev/null"
-
 
 # Keybindings
 exec "setxkbmap -layout us,se"
