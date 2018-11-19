@@ -12,6 +12,9 @@ call vundle#begin('~/.config/nvim/bundle')
 Plugin 'VundleVim/Vundle.vim'
 " Scala highlighting.
 Plugin 'derekwyatt/vim-scala'
+" ELM highlighting.
+Plugin 'elmcast/elm-vim'
+
 " Dart Highlighting.
 Plugin 'dart-lang/dart-vim-plugin'
 " Track the engine.
@@ -38,6 +41,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'auto-pairs-gentle'
 let g:AutoPairsUseInsertedCount = 1
 
+Plugin 'b4winckler/vim-angry'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -49,10 +54,12 @@ syntax on
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " dont wrap normal files
-set nowrap
+set nowrap spell
+set inccommand=nosplit
 
 " wrap tex and md-files
-au BufRead,BufNewFile *.tex setlocal wrap shiftwidth=2 
+au BufRead,BufNewFile *.tex setlocal wrap shiftwidth=2 spell spelllang=en_us
+ 
 au BufRead,BufNewFile *.md setlocal wrap
 au BufRead,BufNewFile *.html setlocal wrap shiftwidth=2
 
