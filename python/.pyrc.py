@@ -1,11 +1,11 @@
+import atexit
+import os
+import sys
+import platform
 try:
-    import atexit
-    import os
-    import sys
-    import platform
     import gnureadline as readline
 except ImportError as exception:
-    print('Shell Enhancement module problem: {0}'.format(exception))
+    import readline
 else:
     # Enable Tab Completion
     # OSX's bind should only be applied with legacy readline.
@@ -25,4 +25,4 @@ else:
         open(history_file, 'a').close()
 
     atexit.register(readline.write_history_file, history_file)
-    print('Booted ~/pythonstartup.py.')
+    print('Booted ~/.pyrc')
