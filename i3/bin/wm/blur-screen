@@ -1,0 +1,6 @@
+#!/bin/sh
+IMAGE=/tmp/i3lock.png
+SCREENSHOT="scrot $IMAGE"
+BLURTYPE="2x8"
+$SCREENSHOT
+convert $IMAGE -blur $BLURTYPE $IMAGE

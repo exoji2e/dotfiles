@@ -1,0 +1,10 @@
+#!/bin/bash
+curr=$(setxkbmap -print | grep xkb_symbols | awk -F"+" '{print $2}')
+echo $curr
+if [ $curr == 'se' ]
+then
+    setxkbmap us
+else
+    setxkbmap se
+fi
+

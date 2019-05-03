@@ -1,0 +1,10 @@
+#!/bin/sh
+#blur-screen
+IMAGE=/tmp/i3lock.png
+cp ~/.config/i3/floral-fractal.png $IMAGE
+setxkbmap us
+set -e
+xset s off dpms 0 10 0
+i3lock -i $IMAGE  --ignore-empty-password --show-failed-attempts --nofork
+xset s off -dpms
+rm $IMAGE

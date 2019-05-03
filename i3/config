@@ -13,8 +13,8 @@ set $mod Mod4
 
 # Pulse Audio controls
 exec start-pulseaudio-x11
-bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks"
-bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set PCM 5%+ && pkill -RTMIN+1 i3blocks"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set PCM 5%- && pkill -RTMIN+1 i3blocks"
 bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse sset Master toggle && pkill -RTMIN+1 i3blocks"
 
 # Sreen brightness controls
@@ -22,9 +22,11 @@ bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse sset Master toggle &
 bindsym XF86MonBrightnessUp exec "light -A 10" 
 # decrease screen brightness
 bindsym XF86MonBrightnessDown exec "light -U 10" 
+bindsym XF86KbdBrightnessUp exec --no-startup-id ~/.local/bin/wm/backlight up
+bindsym XF86KbdBrightnessDown exec --no-startup-id ~/.local/bin/wm/backlight down
 
 # Background
-exec "feh --bg-scale ~/.config/i3/floral-fractal.jpg"
+exec "feh --bg-scale ~/.config/i3/floral-fractal.png"
 # Suspend
 bindsym $mod+Ctrl+Shift+z exec "i3lock -i ~/.config/i3/floral-fractal.png -t && gksudo pm-suspend"
 # Lock
@@ -33,22 +35,26 @@ bindsym $mod+Ctrl+Shift+l exec "i3lock -i ~/.config/i3/floral-fractal.png -t"
 # Startup items
 #
 # Startup activitywatch. SHould make this more clean, right now it assumes very specific folder structure.
-exec --no-startup-id "bash ~/repos/activitywatch/startaw.sh 2> /dev/null"
+#exec --no-startup-id "bash ~/repos/activitywatch/startaw.sh 2> /dev/null"
+
+#exec --no-startup-id "ssh-agent fish"
+#exec --no-startup-id "ssh-add"
 
 
-# Keybindings
-exec "setxkbmap -layout us,se"
-exec "setxkbmap -option 'grp:win_space_toggle,ctrl:nocaps'"
 
-# 200ms before repeat, 30 repeats per second
-exec "xset r rate 300 20"
+bindsym Ctrl+2 exec "~/.local/bin/wm/toggle_lang && pkill -RTMIN+2 i3blocks"
 
-# TouchPad
-exec "synclient ClickFinger2=3 ClickFinger3=2"
-exec "synclient RightButtonAreaLeft=0 RightButtonAreaTop=0"
-exec "synclient HorizTwoFingerScroll=1 HorizEdgeScroll=0"
-exec "synclient VertTwoFingerScroll=1 VertEdgeScroll=0"
-exec "synclient PalmMinWidth=100 PalmDetect=1 MaxTapTime=0"
+exec --no-startup-id "xss-lock -- ~/.local/bin/wm/lock"
+
+## Keybindings
+#exec --no-startup-id "setxkbmap -option 'ctrl:nocaps'"
+#exec "xset r rate 300 20"
+## TouchPad
+#exec "synclient ClickFinger2=3 ClickFinger3=2"
+#exec "synclient RightButtonAreaLeft=0 RightButtonAreaTop=0"
+#exec "synclient HorizTwoFingerScroll=1 HorizEdgeScroll=0"
+#exec "synclient VertTwoFingerScroll=1 VertEdgeScroll=0"
+#exec "synclient PalmMinWidth=100 PalmDetect=1 MaxTapTime=0"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
