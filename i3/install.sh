@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt-get install i3 i3blocks help2man wget
+sudo apt-get install i3 i3blocks help2man wget feh automake autoconf gcc
 
 WALLP=floral-fractal
 
@@ -13,6 +13,6 @@ else
     cd light && git pull && cd ..
 fi
 
-cd light && sudo make && sudo make install && cd ..
+cd light && ./autogen.sh && ./configure && make && sudo make install && cd ..
 
 ./deploy.sh

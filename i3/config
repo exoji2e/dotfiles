@@ -32,15 +32,6 @@ bindsym $mod+Ctrl+Shift+z exec "i3lock -i ~/.config/i3/floral-fractal.png -t && 
 # Lock
 bindsym $mod+Ctrl+Shift+l exec "i3lock -i ~/.config/i3/floral-fractal.png -t"
 
-# Startup items
-#
-# Startup activitywatch. SHould make this more clean, right now it assumes very specific folder structure.
-#exec --no-startup-id "bash ~/repos/activitywatch/startaw.sh 2> /dev/null"
-
-#exec --no-startup-id "ssh-agent fish"
-#exec --no-startup-id "ssh-add"
-
-
 
 bindsym Ctrl+2 exec "~/.local/bin/wm/toggle_lang && pkill -RTMIN+2 i3blocks"
 

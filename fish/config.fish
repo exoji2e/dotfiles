@@ -6,3 +6,4 @@ set -xg PYTHONPATH /home/exoji2e/repos/CompProg/converter
 /usr/bin/keychain $HOME/.ssh/id_rsa
 source "$HOME/.keychain/dragonair-fish"
 ### End-Keychain ###
+set PYTHONSTARTUP $HOME/.pythonstartup.py
