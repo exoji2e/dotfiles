@@ -1,0 +1,4 @@
+#!/bin/bash
+pulseaudio --kill
+rm -r $HOME/.config/pulse/
+pulseaudio --start
