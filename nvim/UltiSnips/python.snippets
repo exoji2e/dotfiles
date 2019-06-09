@@ -1,8 +1,12 @@
 snippet main "main"
 from collections import *
-import sys
-sys.setrecursionlimit(1000000)
-itr = (line for line in sys.stdin.read().split('\n'))
+inp = raw_input
+
+def ni():
+    return int(inp())
+
+def nl():
+    return [int(_) for _ in inp().split()]
 
 endsnippet
 
