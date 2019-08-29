@@ -7,3 +7,12 @@ set -xg PYTHONPATH /home/exoji2e/repos/CompProg/converter
 /usr/bin/keychain $HOME/.ssh/id_rsa
 source "$HOME/.keychain/dragonair-fish"
 ### End-Keychain ###
+
+
+function saveloc --on-event fish_prompt
+pwd > /tmp/whereami
+end
+
+if status is-interactive
+cd (cat /tmp/whereami)
+end
