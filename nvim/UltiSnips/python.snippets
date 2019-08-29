@@ -1,6 +1,10 @@
 snippet main "main"
 from collections import *
+import sys
 inp = raw_input
+
+def err(s):
+    sys.stderr.write('{}\n'.format(s))
 
 def ni():
     return int(inp())
@@ -13,13 +17,24 @@ endsnippet
 snippet cj "Google code jam"
 from collections import *
 import sys
-sys.setrecursionlimit(1000000)
 inp = raw_input
-T = int(inp())
-for t in range(1, T+1):
-    ans = 0
-    
+
+def err(s):
+    sys.stderr.write('{}\n'.format(s))
+
+def ni():
+    return int(inp())
+
+def nl():
+    return [int(_) for _ in inp().split()]
+
+def out(t, ans):
     print('Case #{}: {}'.format(t, ans))
+
+T = ni()
+for t in range(1, T+1):
+    
+    out(t, 0)
 endsnippet
 
 snippet mir "map int raw"
