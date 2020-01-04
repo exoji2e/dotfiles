@@ -39,6 +39,9 @@ bindsym --release $mod+x exec --no-startup-id "import ~/Pictures/screens/`date '
 
 exec --no-startup-id "xss-lock -- ~/.local/bin/wm/lock"
 
+exec_always --no-startup-id "~/.local/bin/wm/restart-aw"
+exec_always --no-startup-id "~/.local/bin/wm/init-keyboard"
+
 ## Keybindings
 #exec --no-startup-id "setxkbmap -option 'ctrl:nocaps'"
 #exec "xset r rate 300 20"

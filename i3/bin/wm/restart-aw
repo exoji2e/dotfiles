@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd ~/repos/activitywatch         # Put your ActivityWatch install folder here
+pkill aw-
+source venv/bin/activate
+aw-qt &
+
+notify-send "ActivityWatch started"   # Optional, sends a notification when ActivityWatch is started
