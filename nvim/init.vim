@@ -10,24 +10,38 @@ call vundle#begin('~/.config/nvim/bundle')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
+" nerdtree fileexplorer
+Plugin 'scrooloose/nerdtree'
+
 " Scala highlighting.
 Plugin 'derekwyatt/vim-scala'
 " ELM highlighting.
-Plugin 'elmcast/elm-vim'
+Plugin 'carmonw/elm-vim'
 
 " Dart Highlighting.
 Plugin 'dart-lang/dart-vim-plugin'
 " Track the engine.
 Plugin 'SirVer/ultisnips'
 let g:UltiSnipsUsePythonVersion = 3
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsSnippetsDir="~/.config/nvim/UltiSnips"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
+Plugin 'christoomey/vim-system-copy'
+
+"Plugin 'ActivityWatch/aw-watcher-vim'
+
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
+
+Plugin 'Valloric/YouCompleteMe'
+
+let g:ycm_semantic_triggers = {
+     \ 'elm' : ['.'],
+     \}
 
 " Asynchronous Lint Engine
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
@@ -36,7 +50,8 @@ Plugin 'w0rp/ale'
 let g:ale_python_flake8_options='--ignore=E225,E402,E501,E741,E226,E701'
 let g:ale_sign_column_always=1
 
-Plugin 'altercation/vim-colors-solarized'
+"Plugin 'altercation/vim-colors-solarized'
+"
 
 Plugin 'auto-pairs-gentle'
 let g:AutoPairsUseInsertedCount = 1
@@ -48,13 +63,17 @@ filetype plugin indent on    " required
 
 
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 syntax on
 " tab = 4spaces
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " dont wrap normal files
 set nowrap spell
+
+hi clear SpellBad
+hi SpellBad cterm=underline
+
 set inccommand=nosplit
 
 " wrap tex and md-files
