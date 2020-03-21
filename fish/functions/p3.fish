@@ -1,3 +1,3 @@
 function p3
-	python3 $argv
+	pypy3 $argv
 end
