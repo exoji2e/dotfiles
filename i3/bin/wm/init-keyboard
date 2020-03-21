@@ -3,8 +3,8 @@ setxkbmap -option 'ctrl:nocaps'
 xset r rate 300 20
 
 # TouchPad
-synclient ClickFinger2=3 ClickFinger3=2
-synclient RightButtonAreaLeft=0 RightButtonAreaTop=0
-synclient HorizTwoFingerScroll=1 HorizEdgeScroll=0
-synclient VertTwoFingerScroll=1 VertEdgeScroll=0
-synclient PalmMinWidth=100 PalmDetect=1 MaxTapTime=0
+# synclient ClickFinger2=3 ClickFinger3=2
+# synclient RightButtonAreaLeft=0 RightButtonAreaTop=0
+# synclient HorizTwoFingerScroll=1 HorizEdgeScroll=0
+# synclient VertTwoFingerScroll=1 VertEdgeScroll=0
+# synclient PalmMinWidth=100 PalmDetect=1 MaxTapTime=0

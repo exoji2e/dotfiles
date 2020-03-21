@@ -1,0 +1,2 @@
+#!/bin/bash
+setxkbmap -print -verbose 10 | grep "layout" | python3 -c "s=input();print(s.split()[-1])"

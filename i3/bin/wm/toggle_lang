@@ -1,10 +1,10 @@
 #!/bin/bash
-curr=$(setxkbmap -print | grep xkb_symbols | awk -F"+" '{print $2}')
-echo $curr
-if [ $curr == 'se' ]
+curr=$(get_lang)
+if [ $curr == 'us' ]
 then
-    setxkbmap us
+    setxkbmap se -option 'ctrl:nocaps'
 else
-    setxkbmap se
+    setxkbmap us -option 'ctrl:nocaps'
 fi
+echo "$curr -> $(get_lang)"
 
