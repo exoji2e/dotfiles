@@ -62,7 +62,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 
-set background=dark
+" set background=dark
 "colorscheme solarized
 syntax on
 " tab = 4spaces
@@ -73,6 +73,13 @@ set nowrap spell
 
 hi clear SpellBad
 hi SpellBad cterm=underline
+hi clear SpellRare
+hi SpellRare cterm=underline
+hi clear SpellCap
+hi SpellCap cterm=underline
+hi clear SpellLocal
+hi SpellLocal cterm=underline
+hi clear MatchParen
 
 set inccommand=nosplit
 
@@ -88,8 +95,8 @@ set whichwrap+=<,>,[,]
 " jump up visual lines instead of real lines.
 noremap k gk
 noremap j gj
-noremap 0 g0
-noremap $ g$
+" noremap 0 g0
+" noremap $ g$
 noremap <Up>   gk
 noremap <Down> gj
 noremap <Home> g<Home>
@@ -97,3 +104,4 @@ noremap <End>  g<End>
 
 set rnu number
 set scrolloff=8
+
