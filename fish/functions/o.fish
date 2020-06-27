@@ -1,7 +1,11 @@
 function o
     if count $argv > /dev/null
-        xdg-open $argv 2> /dev/null &
+        nohup xdg-open $argv >/dev/null 2> /dev/null &
+        rm nohup.out
+        disown
     else
-        xdg-open . 2> /dev/null &
+        nohup xdg-open . >/dev/null 2> /dev/null &
+        rm nohup.out
+        disown
     end
 end
