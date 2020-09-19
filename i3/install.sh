@@ -1,5 +1,6 @@
 #!/bin/bash
-sudo apt-get install i3 i3blocks help2man wget feh automake autoconf gcc
+# sudo apt-get install i3 i3blocks help2man wget feh automake autoconf gcc
+# yay -S xidlehook
 
 WALLP=floral-fractal
 

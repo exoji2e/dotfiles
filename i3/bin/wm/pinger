@@ -1,0 +1,2 @@
+#!/bin/bash
+ping -c 1 8.8.8.8 2>/dev/null | grep "time=" | python3 -c "import sys;s = sys.stdin.read();print(s.split('=')[-1] if s else 'down')"

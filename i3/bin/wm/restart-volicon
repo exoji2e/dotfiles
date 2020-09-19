@@ -1,0 +1,4 @@
+#!/bin/bash
+pkill -f volumeicon
+cp ~/.config/volumeicon/volumeicon.conf ~/.config/volumeicon/current
+volumeicon --config=current

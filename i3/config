@@ -10,6 +10,7 @@ bindsym --release $mod+x exec --no-startup-id "import ~/Pictures/screens/`date '
 
 # Toggle Lang
 bindsym $mod+space exec --no-startup-id "~/.local/bin/toggle_lang && pkill -RTMIN+2 i3blocks"
+bindsym Ctrl+space exec --no-startup-id "~/.local/bin/toggle_lang && pkill -RTMIN+2 i3blocks"
 # Set ctrl:nocaps
 exec --no-startup-id "~/.local/bin/init-keyboard"
 #
@@ -50,7 +51,7 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminal
+bindsym $mod+Return exec lxterminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -65,7 +66,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-exec --no-startup-id volumeicon
+exec_always --no-startup-id "~/.local/bin/wm/restart-volicon" 
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
@@ -306,7 +307,7 @@ exec --no-startup-id clipit
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 15 -locker blurlock
+exec_always --no-startup-id "~/.local/bin/wm/my_lock_wrapper"
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 

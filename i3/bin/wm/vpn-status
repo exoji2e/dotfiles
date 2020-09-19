@@ -1,0 +1,4 @@
+#!/bin/bash
+V=`nordvpn status | grep "Status:" | python3 -c "s = input(); o = s.split('Status: ')[1][0];c='#00FF00' if o=='C' else '#A0A0A0';print(o);print();print(c)"`
+echo "NordVpn $V"
+
