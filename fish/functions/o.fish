@@ -1,11 +1,15 @@
 function o
-    if count $argv > /dev/null
-        nohup xdg-open $argv >/dev/null 2> /dev/null &
-        rm nohup.out
-        disown
+    if type -q open
+        set openCmd open
+    else if type -q xdg-open
+        set openCmd xdg-open
     else
-        nohup xdg-open . >/dev/null 2> /dev/null &
-        rm nohup.out
-        disown
+        echo "no open command"
+        return
+    end
+    if count $argv > /dev/null
+        $openCmd $argv 2> /dev/null &
+    else
+        $openCmd . 2> /dev/null &
     end
 end

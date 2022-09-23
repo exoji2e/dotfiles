@@ -10,11 +10,11 @@ set EDITOR nvim
 
 
 function saveloc --on-event fish_prompt
-pwd > /tmp/whereami
+    pwd > /tmp/whereami
 end
 
 if status is-interactive
-	if test -e /tmp/whereami
-		cd (cat /tmp/whereami)
-	end
+    if [ $HOME = $PWD ]
+        cd (cat /tmp/whereami 2> /dev/null || echo $HOME)
+    end
 end
