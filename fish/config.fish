@@ -1,4 +1,4 @@
-set PATH $HOME/.local/bin $PATH $HOME/.local/bin/wm  $HOME/.gem/ruby/2.7.0/bin
+set PATH $HOME/.local/bin $PATH $HOME/.local/bin/wm  $HOME/.gem/ruby/2.7.0/bin $HOME/.gem/ruby/3.0.0/bin
 set EDITOR nvim
 #set -xg PYTHONPATH /home/exoji2e/repos/CompProg/converter
 #set -xg PYTHONSTARTUP $HOME/.pyrc.py
