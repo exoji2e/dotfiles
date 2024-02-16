@@ -8,6 +8,8 @@ set EDITOR nvim
 #source "$HOME/.keychain/dragonair-fish"
 ### End-Keychain ###
 
+abbr -a g git
+abbr -a vim nvim
 
 function saveloc --on-event fish_prompt
     pwd > /tmp/whereami
