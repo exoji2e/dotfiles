@@ -105,6 +105,8 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim=nvim
 alias gs="git status"
+alias p3="python3"
+alias p8="ping 8.8.8.8"
 
 if [[ `uname` == "Darwin" ]]; then
     ssh-add -q --apple-use-keychain "$HOME/.ssh/id_rsa"
