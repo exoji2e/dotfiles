@@ -1,0 +1,24 @@
+# This is Git's per-user configuration file.
+[user]
+   name = Måns Magnusson
+   email = exoji2e@gmail.com
+[includeIf "gitdir:~/repos/itacih_ab/"]
+   path = .gitconfig-itacih
+[init]
+   defaultBranch = main
+[pull]
+   ff = only
+   rebase = true
+[alias]
+   st = status -sb
+   lg = log --pretty='%Cred%h%Creset | %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(cyan)[%an]%Creset'
+   last = log -1 HEAD --stat
+   done = push origin HEAD
+   amend = commit --amend --no-edit
+   autopush = -c push.autoSetupRemote=true push
+   fpush = push --force-with-lease
+[filter "lfs"]
+   smudge = git-lfs smudge -- %f
+   process = git-lfs filter-process
+   required = true
+   clean = git-lfs clean -- %f
